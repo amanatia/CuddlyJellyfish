@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ai-art",
+    "title": "Is AI art 'Art'?",
+    "image": "/images/AILaundry.jpg",
+    "summary": "'I want AI to do my laundry and dishes so that I can do art and writing. Not for AI to do art and writing so that I can do dishes and laundry.'",
+    "content": "/posts/ai_art.html",
+    "author": "Cuddly Jellyfish",
+    "date": "2025-05-10"
+  },
+    {
+    "id": "color-theory",
+    "title": "Color Theory: The psychology and power of color",
+    "image": "/images/colorTheory.jpg",
+    "summary": "The feelings a shade can evoke. ",
+    "content": "/posts/color_theory.html",
+    "author": "Cuddly Jellyfish",
+    "date": "2025-05-21"
+  }
+]
