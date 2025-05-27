@@ -114,11 +114,62 @@ a:hover{
   font-size: 0.85rem;
 }
 
+/* Html Content */
+
+    @media (min-width: 768px) {
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .post-body p {
+            font-size: 0.95rem;
+        }
+
+        .date-wrapper small {
+            font-size: 0.8rem;
+        }
+    }
+
+
+
+    @media (min-width: 480px) {
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        .post-body p {
+            font-size: 0.9rem;
+        }
+
+        .date-wrapper small {
+            font-size: 0.75rem;
+        }
+    }
+
 /* Post Styles */
 .post-body{
-  width: 650px;
+  /* width: 650px; */
+  word-wrap: break-word;
+  overflow-wrap:break-word ;
 }
 
+.content-wrapper{
+  max-width: 800px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* @media (max-width: 768px) {
+    .post-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+} */
 
 /* Footer */
 footer {

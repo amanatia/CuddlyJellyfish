@@ -7,7 +7,11 @@
             <img src="<%= post.image %>" alt="<%= post.title %>" class="img-fluid mb-4">
 
             <div class="post-body container-fluid px-3 py-5">
-                <%- htmlContent %>
+                <div class="container">
+                    <div class="content-wrapper">
+                        <%- htmlContent %>
+                    </div> 
+                </div>
                 <div class="date-wrapper">
                     <small>
                         <p> Written by: <%= post.author %> </p>
