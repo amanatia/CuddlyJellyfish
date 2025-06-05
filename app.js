@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import axios from "axios"; 
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -63,14 +64,18 @@ app.get("/post/:id", (req, res) => {
       res.render("post", { post, htmlContent: content });
   });
 });
-// app.get("/post/:id", (req, res) => {
-//     const post = posts.find(p => p.id === req.params.id);
-//     if (post) {
-//       res.render("post", {post});
-//     } else {
-//       res.status(404).send("Post not found");
-//     }
-//   });
+
+//Riddles
+app.get("/riddles", async(req, res) =>{
+  try {
+    const response = await axios.get("https://riddles-api.vercel.app/random"); 
+    const {riddle, answer} = response.data; 
+    res.render("riddles", { riddle: {riddle, answer}});
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error fetching riddles");
+  }
+});
 
   
   app.listen(port, () => {

@@ -1,0 +1,20 @@
+
+<%- include('partials/header') %>
+
+<div class="riddles-page">
+
+    <h1 class="riddle-title">Riddle of the day</h1>
+    
+    <div class="riddle-container">
+        <div class="riddle-card">
+            <p id="answer"><%= riddle.answer %></p>
+        </div>
+    </div>
+        <p class="riddle">
+        <%= riddle.riddle %>
+        </p>
+</div>
+
+
+
+<%- include('partials/footer') %>
