@@ -16,5 +16,14 @@
     "content": "/posts/color_theory.html",
     "author": "Cuddly Jellyfish",
     "date": "2025-05-21"
+  },
+  {
+    "id": "remote or office",
+    "title": "Remote or Office Work?",
+    "image": "/posts/remote-work-and-work-from-home.png",
+    "summary": "Which one is better? And why is it better?",
+    "content": "/posts/work.html",
+    "author": "Cuddly Jellyfish",
+    "date": "2025-06-06"
   }
 ]
