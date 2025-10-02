@@ -25,5 +25,14 @@
     "content": "/posts/work.html",
     "author": "Cuddly Jellyfish",
     "date": "2025-06-06"
+  },
+  {
+    "id": "book recomendations",
+    "title": "Book Recomendations",
+    "image": "/images/books.jpg",
+    "summary": "Books I Read and Recommend This Year",
+    "content": "/posts/2025_Books.html",
+    "author": "Cuddly Jellyfish",
+    "date": "2025-10-02"
   }
 ]
