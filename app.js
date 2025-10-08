@@ -28,7 +28,8 @@ setInterval(() => {
 
 app.set("view engine", "ejs");
 
-app.use(express.static('public'));
+console.log("Static folder path:", path.join(__dirname, 'public'));
+app.use(express.static(path.join(__dirname,'public')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -66,17 +67,27 @@ app.get("/post/:id", (req, res) => {
 });
 
 //Riddles
-app.get("/riddles", async(req, res) =>{
+
+app.get("/api/riddle", async(req, res) =>{
   try {
     const response = await axios.get("https://riddles-api.vercel.app/random"); 
-    const {riddle, answer} = response.data; 
-    res.render("riddles", { riddle: {riddle, answer}});
+    res.json(response.data);
   } catch (error) {
     console.error(error);
-    res.status(500).send("Error fetching riddles");
+    res.status(500).send("Error fetching riddle");
   }
 });
 
+app.get("/riddles", async (req, res) => {
+  try{
+    const response = await axios.get("https://riddles-api.vercel.app/random");
+    const riddle = response.data;
+    res.render("riddles", {riddle});
+  }catch (error){
+    console.error("Error loading riddle:", error);
+    res.status(500).send("Error loading riddle page");
+  }
+});
   
   app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}`);

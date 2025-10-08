@@ -373,6 +373,51 @@ hr {
   animation: spin 2.5s linear infinite;
 }
 
+.riddle-button{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 50px;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 30px;
+  background:linear-gradient( #b35dff,  #c200af);
+}
+
+.riddle-button:hover {
+    background-image: linear-gradient(
+    var(--rotate),
+    #b35dff,
+    #cd3ce3 43%,
+    #c200af
+  );
+  animation: spin 3s linear infinite;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(123, 104, 238, 0.4);
+}
+
+.riddle-button:active {
+  transform: scale(0.96);
+  background: linear-gradient(135deg, #5b4acb, #c200af);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* 🧠 Responsive design tweaks */
+@media (max-width: 768px) {
+  .riddle-button {
+    padding: 8px 20px; /* smaller padding for tablets */
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .riddle-button {
+    width: 90%;           /* full-width on small screens */
+    padding: 6px 0;      /* keep nice height */
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+}
+
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;

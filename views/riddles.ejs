@@ -1,20 +1,19 @@
 
 <%- include('partials/header') %>
-
 <div class="riddles-page">
-
-    <h1 class="riddle-title">Riddle of the day</h1>
+    <!--<h1 class="riddle-title">Riddle of the day</h1>-->
     
     <div class="riddle-container">
         <div class="riddle-card">
             <p id="answer"><%= riddle.answer %></p>
         </div>
     </div>
-        <p class="riddle">
+        <p id="riddle-text" class="riddle">
         <%= riddle.riddle %>
         </p>
+        <!--Button-->
+        <button id="next-riddle" class="riddle-button">Next Riddle</button>
 </div>
-
 
 
 <%- include('partials/footer') %>
